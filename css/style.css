@@ -1,0 +1,74 @@
+body {
+  background-color: #000;
+  background-image: url(https://cssanimation.rocks/demo/starwars/images/bg.jpg);
+}
+
+.starwars-demo {
+  height: 17rem;
+  width: 34rem;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  perspective: 5vw;
+  transform-style:preserve-3d;
+}
+
+img {
+  width: 100%;
+}
+
+.star, .wars {
+  position: absolute;
+}
+
+.star {
+  top: 0;
+}
+
+.wars {
+  bottom: 0;
+}
+
+
+.star{
+  animation: star 10s infinite ease-out;
+}
+@keyframes star{
+  0% {
+    transform: scale(1.5) translateY(-1vw);
+    opacity: 0;
+  }
+  20%{
+    opacity: 1;
+  }
+  90%{
+    transform: scale(1);
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+    transform: translateZ(-10vw);
+  }
+}
+
+.wars{
+  animation: wars 10s infinite ease-out;
+}
+@keyframes wars{
+  0% {
+    transform: scale(1.5) translateY(1vw);
+    opacity: 0;
+  }
+  20%{
+    opacity: 1;
+  }
+  90%{
+    transform: scale(1);
+    opacity: 1;
+  }
+  100%{
+    transform: translateZ(-10vw);
+    opacity: 0;
+  }
+}
